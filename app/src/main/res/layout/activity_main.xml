@@ -8,6 +8,7 @@
     android:background="@color/dark"
     tools:context=".MainActivity">
 
+    <!-- Imagem de fundo -->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="404dp"
@@ -20,16 +21,20 @@
         app:layout_constraintVertical_bias="0.18"
         app:srcCompat="@drawable/tela_inicial" />
 
+
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:name="androidx.fragment.app.ListFragment"
-        android:layout_width="406dp"
-        android:layout_height="647dp"
         android:layout_marginTop="4dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnCadastrar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+
+    <!-- Botão Cardápio -->
     <Button
         android:id="@+id/btnCadastrar"
         android:layout_width="115dp"
@@ -40,10 +45,8 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCardapio"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnCardapio"
@@ -55,9 +58,9 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="1.0" />
 
+    <!-- Botão Ver Pedido -->
     <Button
         android:id="@+id/button4"
         android:layout_width="100dp"
@@ -68,9 +71,7 @@
         android:textColor="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCardapio"
-        app:layout_constraintHorizontal_bias="0.773"
         app:layout_constraintStart_toEndOf="@+id/btnCadastrar"
-        app:layout_constraintTop_toBottomOf="@+id/fragmentContainerView"
-        app:layout_constraintVertical_bias="0.36" />
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
