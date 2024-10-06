@@ -1,17 +1,14 @@
 package com.isabella.stackedburgers
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.Spinner
-import android.widget.TextView
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 class CadastrarFragment : Fragment(R.layout.fragment_cadastrar) {
 
@@ -21,13 +18,53 @@ class CadastrarFragment : Fragment(R.layout.fragment_cadastrar) {
         setupSpinnerHamburguer(view)
         setupSpinnerPontoCarne(view)
 
-
         val btnEnviar: Button = view.findViewById(R.id.btnEnviar)
+        val editTextNome: EditText = view.findViewById(R.id.editTextText)
+        val editTextObservacao: EditText = view.findViewById(R.id.editTextText2)
+
+        val checkQueijo: CheckBox = view.findViewById(R.id.checkBoxQueijo)
+        val checkMolho: CheckBox = view.findViewById(R.id.checkBoxMolho)
+
         btnEnviar.setOnClickListener {
-            selecionarItensSpinner(view)
+            val nome = editTextNome.text.toString()
+            val observacao = editTextObservacao.text.toString()
+            val spinnerHamburguer: Spinner = view.findViewById(R.id.spinnerHambuguer)
+            val spinnerPontoCarne: Spinner = view.findViewById(R.id.spinnerCarne)
+
+            val hamburguerSelecionado = spinnerHamburguer.selectedItem?.toString() ?: ""
+            val pontoCarneSelecionado = spinnerPontoCarne.selectedItem?.toString() ?: ""
+
+            Log.d("CadastrarFragment", "Nome: $nome, Hamburguer: $hamburguerSelecionado, Ponto da Carne: $pontoCarneSelecionado, Observação: $observacao")
+
+
+            if (nome.isNotEmpty() && hamburguerSelecionado.isNotEmpty() && pontoCarneSelecionado.isNotEmpty()) {
+
+                val bundle = Bundle().apply {
+                    putString("nome", nome)
+                    putString("hamburguer", hamburguerSelecionado)
+                    putString("pontoCarne", pontoCarneSelecionado)
+                    putString("observacao", observacao)
+
+                    putBoolean("adicional_queijo", checkQueijo.isChecked)
+                    putBoolean("adicional_molho", checkMolho.isChecked)
+                }
+
+
+                val pedidoFragment = PedidoFragment().apply {
+                    arguments = bundle
+                }
+
+
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.fragmentContainerView2,pedidoFragment)
+
+                    .addToBackStack(null)
+                    .commit()
+            } else {
+                Log.e("CadastrarFragment", "Campos obrigatórios não preenchidos.")
+            }
         }
     }
-
 
     private fun setupSpinnerHamburguer(view: View) {
         val hamburguers = listOf("Hambúrguer de Carne", "Hambúrguer de Frango", "Hambúrguer Vegetariano")
@@ -39,7 +76,6 @@ class CadastrarFragment : Fragment(R.layout.fragment_cadastrar) {
         )
     }
 
-
     private fun setupSpinnerPontoCarne(view: View) {
         val pontos = listOf("Mal Passado", "Ao Ponto", "Bem Passado")
         val spinnerPontoCarne: Spinner = view.findViewById(R.id.spinnerCarne)
@@ -49,17 +85,4 @@ class CadastrarFragment : Fragment(R.layout.fragment_cadastrar) {
             pontos
         )
     }
-
-
-    private fun selecionarItensSpinner(view: View) {
-        val spinnerHamburguer: Spinner = view.findViewById(R.id.spinnerHambuguer)
-        val spinnerPontoCarne: Spinner = view.findViewById(R.id.spinnerCarne)
-
-        val hamburguerSelecionado = spinnerHamburguer.selectedItem
-        val pontoCarneSelecionado = spinnerPontoCarne.selectedItem
-
-        val resultado: TextView = view.findViewById(R.id.txtResultado)
-        resultado.text = "Hambúrguer: $hamburguerSelecionado\nPonto da Carne: $pontoCarneSelecionado"
-    }
 }
-

@@ -155,7 +155,7 @@
                         app:layout_constraintTop_toBottomOf="@+id/spinnerCarne" />
 
                     <CheckBox
-                        android:id="@+id/checkBox4"
+                        android:id="@+id/checkBoxQueijo"
                         android:layout_width="340dp"
                         android:layout_height="35dp"
                         android:layout_marginTop="10dp"
@@ -165,14 +165,14 @@
                         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
                     <CheckBox
-                        android:id="@+id/checkBox5"
+                        android:id="@+id/checkBoxMolho"
                         android:layout_width="340dp"
                         android:layout_height="35dp"
                         android:layout_marginTop="8dp"
                         android:text="Molho especial"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+                        app:layout_constraintTop_toBottomOf="@+id/checkBoxQueijo" />
 
                     <TextView
                         android:id="@+id/textView7"
@@ -184,7 +184,7 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.083"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+                        app:layout_constraintTop_toBottomOf="@+id/checkBoxMolho" />
 
                     <Button
                         android:id="@+id/btnEnviar"
@@ -193,23 +193,12 @@
                         android:layout_marginTop="10dp"
                         android:backgroundTint="@color/dark"
                         android:text="Enviar"
-                        android:textColor="#000000"
+                        android:textColor="#FFFFFF"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
-                    <TextView
-                        android:id="@+id/txtResultado"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:padding="16dp"
-                        android:text="Resultado do Pedido"
-                        android:textColor="@color/black"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 

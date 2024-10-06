@@ -5,25 +5,29 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.os.bundleOf
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 class MainActivity : AppCompatActivity() {
     private lateinit var btnCadastrar: Button
     private lateinit var btnCardapio: Button
-
+    private lateinit var btnPedido: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         btnCadastrar = findViewById(R.id.btnCadastrar)
+        btnPedido = findViewById(R.id.btnPedido)
         btnCardapio = findViewById(R.id.btnCardapio)
 
         btnCadastrar.setOnClickListener{
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView,CadastrarFragment())
+                .replace(R.id.fragmentContainerView2,CadastrarFragment())
+                .commit()
+        }
+
+        btnPedido.setOnClickListener{
+            supportFragmentManager.beginTransaction()
+                .replace(R.id.fragmentContainerView2,PedidoFragment())
                 .commit()
         }
 
