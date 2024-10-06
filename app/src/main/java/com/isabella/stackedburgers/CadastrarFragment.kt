@@ -13,11 +13,6 @@ import android.widget.TextView
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [CadastrarFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CadastrarFragment : Fragment(R.layout.fragment_cadastrar) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
