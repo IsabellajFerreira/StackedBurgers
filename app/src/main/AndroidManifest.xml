@@ -13,10 +13,11 @@
         android:theme="@style/Theme.StackedBurgers"
         tools:targetApi="31">
         <activity
+            android:name=".item_pedido"
+            android:exported="false" />
+        <activity
             android:name=".CardapioActivity"
-            android:exported="true">
-        </activity>
-
+            android:exported="true"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true">

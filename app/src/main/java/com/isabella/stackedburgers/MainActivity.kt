@@ -9,14 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
     private lateinit var btnCadastrar: Button
     private lateinit var btnCardapio: Button
-    private lateinit var btnPedido: Button
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         btnCadastrar = findViewById(R.id.btnCadastrar)
-        btnPedido = findViewById(R.id.btnPedido)
         btnCardapio = findViewById(R.id.btnCardapio)
 
         btnCadastrar.setOnClickListener{
@@ -25,11 +24,6 @@ class MainActivity : AppCompatActivity() {
                 .commit()
         }
 
-        btnPedido.setOnClickListener{
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainerView2,PedidoFragment())
-                .commit()
-        }
 
         btnCardapio.setOnClickListener {
             val intent = Intent(this, CardapioActivity::class.java)
