@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">StackedBurgers</string>
+    <string name="produto">Procurar produto</string>
+    <string name="lanches">Lanches</string>
+    <string name="batatas">Batatas</string>
+    <string name="Bebidas">Bebidas</string>
+</resources>
