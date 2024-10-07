@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StackedBurgers</string>
+    <string name="nome">"Name: "</string>
+    <string name="hamburguer">Burger Choice</string>
+    <string name="adicionais">Additional</string>
+    <string name="pontoCarne">Meat point</string>
+    <string name="observacoes">Observations</string>
+    <string name="enviar">Send</string>
+    <string name="produto">Search for product</string>
+    <string name="lanches">Snacks</string>
+    <string name="batatas">Potatoes</string>
+    <string name="bebidas">Drinks</string>
+    <string name="combo1">Combo 1</string>
+    <string name="combo2">Combo 2</string>
+    <string name="combo3">Combo 3</string>
+    <string name="combo4">Combo 4</string>
+    <string name="cadastrar">Register Order</string>
+    <string name="cardapio">Menu</string>
+    <string name="pedido">Place your order here</string>
+    <string name="queijoExtra">Extra Cheese</string>
+    <string name="molhoEspecial">Special sauce</string>
+</resources>

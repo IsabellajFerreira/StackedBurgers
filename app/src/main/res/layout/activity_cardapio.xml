@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundo_branco"
-    tools:context=".cardapio">
+    tools:context=".CardapioActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -81,7 +81,7 @@
                 android:id="@+id/textViewCombo1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Combo3"
+                android:text="@string/combo3"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -127,7 +127,7 @@
                 android:id="@+id/textViewDescri4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Combo4"
+                android:text="@string/combo4"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -195,7 +195,7 @@
             android:layout_height="48dp"
             android:layout_weight="1"
             android:background="@drawable/fundo_btn_cinza"
-            android:text="@string/Bebidas"
+            android:text="@string/bebidas"
             android:textColor="#FB5C00" />
     </LinearLayout>
 
@@ -228,7 +228,7 @@
                 android:id="@+id/textViewDescri1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Combo 1"
+                android:text="@string/combo1"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
@@ -274,7 +274,7 @@
                 android:id="@+id/textViewDescri2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Combo2"
+                android:text="@string/combo2"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 

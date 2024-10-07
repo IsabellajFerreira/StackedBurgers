@@ -27,7 +27,7 @@
         android:layout_height="55dp"
         android:layout_marginStart="10dp"
         android:backgroundTint="@color/dark"
-        android:text="Cadastrar Pedido"
+        android:text="@string/cadastrar"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCardapio"
@@ -40,7 +40,7 @@
         android:layout_height="55dp"
         android:layout_marginEnd="16dp"
         android:backgroundTint="@color/dark"
-        android:text="Cardapio"
+        android:text="@string/cardapio"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

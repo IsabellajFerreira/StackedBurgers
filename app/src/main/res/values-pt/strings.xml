@@ -1,13 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">StackedBurgers</string>
-    <string name="nome">Nome: </string>
+    <string name="nome">"Nome: "</string>
     <string name="hamburguer">Escolha do Hambúrguer</string>
     <string name="adicionais">Adicionais</string>
     <string name="pontoCarne">Ponto da carne</string>
     <string name="observacoes">Observações</string>
     <string name="enviar">Enviar</string>
-    <string name="queijoExtra">Queijo Extra</string>
-    <string name="molhoEspecial">Molho especial</string>
     <string name="produto">Procurar produto</string>
     <string name="lanches">Lanches</string>
     <string name="batatas">Batatas</string>
@@ -19,8 +18,6 @@
     <string name="cadastrar">Cadastrar Pedido</string>
     <string name="cardapio">Cardapio</string>
     <string name="pedido">Monte seu pedido aqui</string>
-
-
-
-
+    <string name="queijoExtra">Queijo Extra</string>
+    <string name="molhoEspecial">Molho especial</string>
 </resources>
