@@ -10,7 +10,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var btnCadastrar: Button
     private lateinit var btnCardapio: Button
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,7 +22,6 @@ class MainActivity : AppCompatActivity() {
                 .replace(R.id.fragmentContainerView2,CadastrarFragment())
                 .commit()
         }
-
 
         btnCardapio.setOnClickListener {
             val intent = Intent(this, CardapioActivity::class.java)

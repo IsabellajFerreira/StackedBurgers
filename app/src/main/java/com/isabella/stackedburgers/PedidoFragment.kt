@@ -33,7 +33,6 @@ class PedidoFragment : Fragment(R.layout.fragment_pedido) {
                 pedidos.add(novoPedido)
             }
         }
-
         for (pedido in pedidos) {
             adicionarPedidoView(pedido)
         }
@@ -72,7 +71,6 @@ class PedidoFragment : Fragment(R.layout.fragment_pedido) {
             text = "Observação: ${pedido.observacao}"
             textSize = 16f
         })
-
         val buttonLayout = LinearLayout(requireContext()).apply {
             orientation = LinearLayout.HORIZONTAL
             layoutParams = LinearLayout.LayoutParams(
@@ -80,14 +78,12 @@ class PedidoFragment : Fragment(R.layout.fragment_pedido) {
                 LinearLayout.LayoutParams.WRAP_CONTENT
             )
         }
-
         val btnAtualizar = Button(requireContext()).apply {
             text = "Atualizar"
             setOnClickListener {
                 editarPedido(pedido)
             }
         }
-
         val btnDeletar = Button(requireContext()).apply {
             text = "Deletar"
             setOnClickListener {
@@ -97,15 +93,12 @@ class PedidoFragment : Fragment(R.layout.fragment_pedido) {
         }
         buttonLayout.addView(btnAtualizar)
         buttonLayout.addView(btnDeletar)
-
         pedidosContainer?.addView(pedidoLayout)
         pedidosContainer?.addView(buttonLayout)
     }
-
     private fun deletarPedido(pedido: Pedido) {
         pedidos.remove(pedido)
     }
-
     private fun editarPedido(pedido: Pedido) {
         val cadastrarFragment = CadastrarFragment().apply {
             arguments = Bundle().apply {
@@ -116,7 +109,6 @@ class PedidoFragment : Fragment(R.layout.fragment_pedido) {
                 putStringArrayList("adicionais", ArrayList(pedido.adicionais))
             }
         }
-
         requireActivity().supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainerView2, cadastrarFragment)
             .addToBackStack(null)
